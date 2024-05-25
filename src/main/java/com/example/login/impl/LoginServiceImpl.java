@@ -1,7 +1,6 @@
 package com.example.login.impl;
 
 import com.example.dao.LoginDao;
-import com.example.dao.impl.LoginDaoImpl;
 import com.example.login.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

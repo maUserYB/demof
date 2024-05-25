@@ -1,7 +1,5 @@
 package com.example.dao;
 
-import org.springframework.stereotype.Repository;
-
 /**
  * @Author: maYanBo
  * @CreateTime: 2024-05-24 19:03:10
