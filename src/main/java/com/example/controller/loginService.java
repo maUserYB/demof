@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.common.CommonResult;
 import com.example.entity.UserInfo;
 import com.example.login.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,8 @@ public class loginService {
     LoginService loginService;
 
     @PostMapping("/login")
-    public void loginCheck(@RequestBody UserInfo user) {
-        loginService.loginCheck(user.getUserId(), user.getPassword());
+    public CommonResult loginCheck(@RequestBody UserInfo user) {
+        return loginService.loginCheck(user.getUserId(), user.getPassword());
     }
 
 }

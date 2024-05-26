@@ -1,5 +1,7 @@
 package com.example.login;
 
+import com.example.common.CommonResult;
+
 public interface LoginService {
-    void loginCheck(String userId, String password);
+    CommonResult loginCheck(String userId, String password);
 }
