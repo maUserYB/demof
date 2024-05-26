@@ -1,6 +1,8 @@
 package com.example.mapper;
 
+import com.example.entity.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @Author: maYanBo
@@ -11,4 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface LoginMapper {
     String getPassword(String userId);
+
+    void updateUser(@Param("user") UserInfo user);
 }

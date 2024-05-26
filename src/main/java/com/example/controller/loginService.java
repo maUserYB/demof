@@ -26,4 +26,9 @@ public class loginService {
         return loginService.loginCheck(user.getUserId(), user.getPassword());
     }
 
+    @PostMapping("/updatePwd")
+    public CommonResult updateUserInfo(@RequestBody UserInfo userInfo) {
+        return loginService.updateUserInfo(userInfo);
+    }
+
 }

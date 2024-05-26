@@ -1,6 +1,7 @@
 package com.example.dao.impl;
 
 import com.example.dao.LoginDao;
+import com.example.entity.UserInfo;
 import com.example.mapper.LoginMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -19,5 +20,10 @@ public class LoginDaoImpl implements LoginDao {
     public String getPassword(String userId) {
         String password = loginMapper.getPassword(userId);
         return password;
+    }
+
+    @Override
+    public void updateUserInfo(UserInfo user) {
+        loginMapper.updateUser(user);
     }
 }

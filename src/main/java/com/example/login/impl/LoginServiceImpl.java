@@ -9,6 +9,10 @@ import com.example.login.LoginService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
 
 /**
  * @Author: maYanBo
@@ -36,5 +40,22 @@ public class LoginServiceImpl implements LoginService {
         } else {
             return CommonResult.failed(ResultCode.FORBIDDEN, "认证失败");
         }
+    }
+
+    @Transactional(propagation= Propagation.REQUIRED)
+    @Override
+    public CommonResult<Boolean> updateUserInfo(UserInfo userInfo) {
+        Boolean result = updateUser(userInfo);
+        return CommonResult.success(result, "用户密码更新成功");
+    }
+
+    private Boolean updateUser(UserInfo user) {
+        loginDao.updateUserInfo(user);
+        ArrayList<String> items = new ArrayList<>();
+        items.add("a1");
+
+        // 触发异常
+        String index2 = items.get(2);
+        return true;
     }
 }
