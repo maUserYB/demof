@@ -32,7 +32,7 @@ import java.util.Map;
 @Aspect
 public class ApiLogAspect {
 
-    @Pointcut("execution(* com.example.controller..*.*(..))")
+    @Pointcut("execution(* com.example.controller..LoginService.*(..))")
     public void controller() {
     }
 

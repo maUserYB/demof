@@ -1,0 +1,21 @@
+### /redis/set
+POST http://localhost:8080/redis/set?key=11&value=2323
+Content-Type: application/json
+
+
+### /redis/set-remote
+POST http://192.168.1.4:8080/redis/set?key=11&value=23
+Content-Type: application/json
+
+### /redis/get
+GET http://localhost:8080/redis/get?key=11
+Content-Type: application/json
+
+
+### /redis/get-remote
+GET http://192.168.1.4:8080/redis/get?key=11
+Content-Type: application/json
+
+### /test/test1
+GET http://192.168.1.4:8080/test/test1?num=11
+Content-Type: application/json

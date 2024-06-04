@@ -51,11 +51,12 @@ public class LoginServiceImpl implements LoginService {
 
     private Boolean updateUser(UserInfo user) {
         loginDao.updateUserInfo(user);
+        String password = loginDao.getPassword(user.getUserId());
         ArrayList<String> items = new ArrayList<>();
         items.add("a1");
 
         // 触发异常
-        String index2 = items.get(2);
+//        String index2 = items.get(2);
         return true;
     }
 }

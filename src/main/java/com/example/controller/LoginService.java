@@ -2,7 +2,6 @@ package com.example.controller;
 
 import com.example.common.CommonResult;
 import com.example.entity.UserInfo;
-import com.example.login.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/user")
-public class loginService {
+public class LoginService {
     @Autowired
-    LoginService loginService;
+    com.example.login.LoginService loginService;
 
     @PostMapping("/login")
     public CommonResult loginCheck(@RequestBody UserInfo user) {
